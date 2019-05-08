@@ -71,9 +71,19 @@
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#hasPI -->
 
     <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#hasPI">
+        <owl:inverseOf rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#isPIFor"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#isPIFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#isPIFor">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
     </owl:ObjectProperty>
     
 
@@ -90,9 +100,20 @@
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#runBy -->
 
     <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#runBy">
+        <owl:inverseOf rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#runnerOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#runnerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#runnerOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study"/>
     </owl:ObjectProperty>
     
 
@@ -110,13 +131,18 @@
 
     <!-- http://purl.org/ontology/bibo/doi -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/bibo/doi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#dateHarvested -->
 
     <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#dateHarvested">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -125,6 +151,7 @@
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#harvestedBy -->
 
     <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#harvestedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -133,6 +160,8 @@
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#projectId -->
 
     <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#projectId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -142,6 +171,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#projectType">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -150,6 +181,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#sampleId">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -157,6 +190,8 @@
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#studyId -->
 
     <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#studyId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -164,19 +199,30 @@
 
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#studyType -->
 
-    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#studyType"/>
+    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#studyType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#subjectSpecies -->
 
-    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#subjectSpecies"/>
+    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#subjectSpecies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#summary -->
 
     <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#summary">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -185,6 +231,7 @@
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#workbenchLink -->
 
     <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#workbenchLink">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -192,7 +239,10 @@
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -217,18 +267,6 @@
 
     <owl:Class rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Dataset">
         <rdfs:subClassOf rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Domain_entity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#sampleId"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#subjectSpecies"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -243,36 +281,6 @@
 
     <owl:Class rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project">
         <rdfs:subClassOf rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Domain_entity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/ontology/bibo/doi"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#projectId"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#projectType"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#summary"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -281,30 +289,6 @@
 
     <owl:Class rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study">
         <rdfs:subClassOf rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Domain_entity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#studyId"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#studyType"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#summary"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
