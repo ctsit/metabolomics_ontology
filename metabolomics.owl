@@ -40,19 +40,10 @@
     
 
 
-    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#collectedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#collectedBy">
-        <owl:inverseOf rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#collectionFor"/>
-        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study"/>
-        <rdfs:range rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#collectionFor -->
 
     <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#collectionFor">
+        <owl:inverseOf rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#inCollection"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
         <rdfs:range rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study"/>
@@ -126,6 +117,15 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#inCollection -->
+
+    <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#inCollection">
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Study"/>
+        <rdfs:range rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Project"/>
     </owl:ObjectProperty>
     
 
