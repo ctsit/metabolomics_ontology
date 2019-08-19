@@ -1,2 +1,5 @@
-# metabolomics_ontology
-Ontology file for metabolomics.info vivo
+Metabolomics Ontology
+=====================
+
+Ontology for [Metabolomics Info](https://metabolomics.info).
+
