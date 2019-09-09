@@ -93,6 +93,16 @@
     
 
 
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#hasParent">
+        <owl:inverseOf rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#parentOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:ObjectProperty>
+
+
+
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#inCollection -->
 
     <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#inCollection">
@@ -137,6 +147,15 @@
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
     </owl:ObjectProperty>
     
+
+
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#parentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#parentOf">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:ObjectProperty>
+
 
 
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#produced -->
