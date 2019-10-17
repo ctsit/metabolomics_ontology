@@ -217,6 +217,15 @@
     
 
 
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#citation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#citation">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#dateHarvested -->
 
     <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#dateHarvested">
