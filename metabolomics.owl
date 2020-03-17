@@ -390,6 +390,47 @@
     </owl:DatatypeProperty>
 
 
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#functionality -->
+    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#functionality">
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Tool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">
+            Functionality is defined by the examples &quot;pre- and post-processing, statistical analysis, workflow and
+            other functions&quot; in https://dx.doi.org/10.1007%2Fs11306-017-1242-7.
+        </rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#instrumentalDataType -->
+    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#instrumentalDataType">
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Tool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">
+            Instrumental Data Type is defined by the examples &quot;LC–MS, GC–MS
+            or NMR&quot; in https://dx.doi.org/10.1007%2Fs11306-017-1242-7.
+        </rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#approach -->
+    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#approach">
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Tool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">https://dx.doi.org/10.1007%2Fs11306-017-1242-7</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#programmingLanguage -->
+    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#programmingLanguage">
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Tool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">https://dx.doi.org/10.1007%2Fs11306-017-1242-7</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#softwareType -->
+    <owl:DatatypeProperty rdf:about="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#softwareType">
+        <rdfs:domain rdf:resource="http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#Tool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">https://dx.doi.org/10.1007%2Fs11306-017-1242-7</rdfs:comment>
+    </owl:DatatypeProperty>
+
 
     <!-- http://www.metabolomics.info/ontologies/2019/metabolomics-consortium#workbenchLink -->
 
