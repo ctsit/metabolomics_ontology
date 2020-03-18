@@ -1,0 +1,34 @@
+Change Log
+==========
+
+## v0.2.0 - 2020-03-18
+
+ * Add data properties from Metabolomics Tools Wiki (Taeber Rapczak)
+ * Update README.md (Taeber Rapczak)
+
+
+## v0.1.2 - 2020-02-05
+
+ * Remove trailing whitespace (Taeber Rapczak)
+ * Add develops and developedBy data properties (Taeber Rapczak)
+ * Add citation data property to publications (Naomi Braun)
+ * Include Studies in domains for subjectSpecies (Naomi Braun)
+ * Add data properties for Tools (Taeber Rapczak)
+ * Add parentOf and hasParent obj properties for Orgs (Taeber Rapczak)
+ * Add submitted data prop for Study (Taeber Rapczak)
+ * Rename associatedWith and associationFor and add managedBy and manages (Naomi Braun)
+ * Change funding source to data property (Naomi Braun)
+
+
+## v0.1.1 - 2019-08-19
+
+ * Remove workbenchLink from Dataset class (Naomi Braun)
+ * Add workbenchLink property to Project, Study, and Dataset (Naomi Braun)
+ * Rename collectedBy to inCollection (Naomi Braun)
+ * Add inCollection (Purva Kulkarni)
+ * Make inverses of all object properties (Naomi Braun)
+
+
+## v0.1.0 - 2019-08-19
+
+Initial release
